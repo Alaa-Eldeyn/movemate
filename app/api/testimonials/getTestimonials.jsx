@@ -3,9 +3,9 @@ import { createClient } from "contentful";
 import { useEffect, useState } from "react";
 
 const client = createClient({
-  space: process.env.SPACE_ID,
+  space: process.env.NEXT_PUBLIC_SPACE_ID,
   environment: "master",
-  accessToken: process.env.CONTENTFUL_TOKEN,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN,
 });
 export const useGetTestimonials = () => {
   const [loading, setLoading] = useState(true);
