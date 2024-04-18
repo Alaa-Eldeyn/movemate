@@ -21,8 +21,8 @@ const page = () => {
   const srv = serviceList.filter(
     (item) => item.title === pathNames[pathNames.length - 1].toLowerCase()
   );
-  const { title,label, description, img, extraDescription } = srv[0];
-  
+  const { title, label, description, img, extraDescription } = srv[0];
+
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
@@ -41,7 +41,7 @@ const page = () => {
     address,
     floor,
     numberOfRooms,
-    notes
+    notes,
   }) => {
     setLoading(true);
     await fetch("/api/painting", {
@@ -50,7 +50,7 @@ const page = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title:label,
+        title: label,
         firstName,
         lastName,
         email,
@@ -58,7 +58,7 @@ const page = () => {
         address,
         floor,
         numberOfRooms,
-        notes
+        notes,
       }),
     })
       .then((res) => {
@@ -120,6 +120,7 @@ const page = () => {
       error: errors.numberOfRooms,
       register: register("numberOfRooms"),
       isTextArea: false,
+      steps: 0.5,
     },
     {
       idTag: "address",

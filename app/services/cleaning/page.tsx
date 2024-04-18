@@ -122,6 +122,7 @@ const page = () => {
       error: errors.numberOfRooms,
       register: register("numberOfRooms"),
       isTextArea: false,
+      steps: .5,
     },
     {
       idTag: "cleaningDate",
