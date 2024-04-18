@@ -19,9 +19,9 @@ export async function POST(req: NextRequest) {
 
   try {
     const data = await resend.emails.send({
-      from: "MoveMate <onboarding@resend.dev>",
-      to: ["alislami474@gmail.com"],
-      subject: title, 
+      from: String(process.env.NEXT_PUBLIC_FROM_EMAIL),
+      to: [String(process.env.NEXT_PUBLIC_TO_EMAIL)],
+      subject: title,
       react: EmailTemplate({
         firstName,
         lastName,
