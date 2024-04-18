@@ -21,6 +21,7 @@ import {
 interface EmailTemplateProps {
   fullName: string;
   title: string;
+  phoneNumber: string;
   description: string;
   email: string;
 }
@@ -30,6 +31,7 @@ const baseUrl = "https://www.reactemailtemplate.com/";
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   fullName,
   title,
+  phoneNumber,
   description,
   email,
 }) => (
@@ -89,6 +91,16 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           <Section>
             <Row className="mt-8 flex gap-5">
               <Text className="m-0 text-xl font-semibold text-gray-900">
+                Handy Nummer:{" "}
+                <span className="mt-2 text-[16px] text-gray-500">
+                  {phoneNumber}
+                </span>
+              </Text>
+            </Row>
+          </Section>
+          <Section>
+            <Row className="mt-8 flex gap-5">
+              <Text className="m-0 text-xl font-semibold text-gray-900">
                 Thema:{" "}
                 <span className="mt-2 text-[16px] text-gray-500"> {title}</span>
               </Text>
@@ -99,7 +111,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               <Text className="m-0 text-xl font-semibold text-gray-900">
                 Message:{" "}
                 <span className="mt-2 text-[16px] text-gray-500">
-                  {" "}
                   {description}
                 </span>
               </Text>

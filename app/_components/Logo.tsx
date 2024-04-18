@@ -5,7 +5,7 @@ import logo from "../../public/Logo.png";
 const Logo = () => {
   return (
     <div>
-      <Image src={logo} alt="logo" width={100}  />
+      <Image src={logo} alt="logo" width={180}  />
     </div>
   );
 };

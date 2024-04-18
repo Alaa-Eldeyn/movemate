@@ -23,7 +23,7 @@ const EmailError = () => {
         href="/"
         className="px-5 py-2 text-white bg-primary cursor-pointer hover:bg-sky-700 rounded-lg soft"
       >
-        Zurück nach Hause
+        Zurück nach Hauptseite
       </a>
     </motion.div>
   );

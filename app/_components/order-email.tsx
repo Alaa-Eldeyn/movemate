@@ -31,7 +31,7 @@ interface EmailTemplateProps {
   movingDate?: string;
   cleaningDate?: string;
   disposalDate?: string;
-  title: string;  
+  title: string;
   notes?: string;
 }
 
@@ -272,10 +272,10 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                   Move<span className="text-orange-500">Mate</span>
                 </Text>
                 <Text className="my-2 text-[16px] font-semibold text-gray-900">
-                  Transaction
+                  Transaktion
                 </Text>
                 <Text className="mt-1 text-[16px] text-gray-500">
-                  Think different
+                  Denke anders
                 </Text>
               </Column>
               <Column align="left" className="table-cell align-bottom">

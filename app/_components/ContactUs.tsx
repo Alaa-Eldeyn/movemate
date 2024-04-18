@@ -30,12 +30,15 @@ const ContactUs = () => {
       .string()
       .min(1, { message: "Ihre E-Mail-Adresse ist erforderlich." })
       .email({ message: "Ungültige E-Mail." }),
+    phoneNumber: z.string().min(1, { message: "Phone number is required" }),
     subject: z
       .string()
       .min(1, { message: "Der Titel muss mindestens 1 Zeichen enthalten." }),
     message: z
       .string()
-      .min(1, { message: "Die Nachricht muss mindestens 1 Zeichen enthalten." }),
+      .min(1, {
+        message: "Die Nachricht muss mindestens 1 Zeichen enthalten.",
+      }),
   });
   type ISupport = z.infer<typeof supportSchema>;
   const {
@@ -48,6 +51,7 @@ const ContactUs = () => {
   const onSubmit: SubmitHandler<ISupport> = async ({
     fullName,
     email,
+    phoneNumber,
     subject,
     message,
   }) => {
@@ -60,6 +64,7 @@ const ContactUs = () => {
       body: JSON.stringify({
         fullName,
         email,
+        phoneNumber,
         title: subject,
         description: message,
       }),
@@ -93,6 +98,14 @@ const ContactUs = () => {
       isTextArea: false,
     },
     {
+      idTag: "phone",
+      type: "tel",
+      placeholder: "Handy Nummer",
+      error: errors.phoneNumber,
+      register: register("phoneNumber"),
+      isTextArea: false,
+    },
+    {
       idTag: "subject",
       type: "text",
       placeholder: "Thema",
@@ -119,7 +132,7 @@ const ContactUs = () => {
             initial={variantsLeft.hidden}
             animate={variantsLeft.enter}
           >
-            <h1 className="text-3xl font-extrabold">{`Lass uns reden`}</h1>
+            <h1 className="text-3xl font-extrabold">{`Lassen Sie uns reden`}</h1>
             <p className="text-sm text-gray-400 mt-3">
               {`Sie möchten eine große Idee oder Marke entwickeln und benötigen Hilfe? Dann wenden Sie sich an uns. Wir würden uns freuen, von Ihrem Projekt zu hören und Ihnen zu helfen.`}
             </p>
@@ -135,7 +148,7 @@ const ContactUs = () => {
                     className="text-gray-600 soft hover:text-primary text-sm ml-3"
                     target="_blank"
                   >
-                    <small className="block">Post</small>
+                    <small className="block">Mail</small>
                     <strong>info@MoveMate.ch</strong>
                   </a>
                 </li>
@@ -155,7 +168,7 @@ const ContactUs = () => {
               </ul>
             </div>
             <div className="mt-12">
-              <h2 className="text-xl font-extrabold">Soziale Netzwerke</h2>
+              <h2 className="text-xl font-extrabold">Social media</h2>
               <ul className="flex mt-3 space-x-4">
                 <li className="bg-[#e6e6e6cf] hover:text-white hover:bg-blue-500 soft cursor-pointer hover:scale-110 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <a href="#">

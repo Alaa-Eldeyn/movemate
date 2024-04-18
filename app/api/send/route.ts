@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
-  const { fullName, title, description, email } = await req.json();
+  const { fullName, title, phoneNumber, description, email } = await req.json();
 
   try {
     const data = await resend.emails.send({
@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       react: EmailTemplate({
         fullName,
         title,
+        phoneNumber,
         description,
         email,
       }),
