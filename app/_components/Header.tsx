@@ -100,7 +100,7 @@ const Header = () => {
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                           }`}
                         >
-                          {menuItem.title}
+                          {menuItem.label}
                         </Link>
                       ) : (
                         <>
@@ -108,7 +108,7 @@ const Header = () => {
                             onClick={() => handleSubmenu(index)}
                             className={`flex soft cursor-pointer items-center justify-between py-2 !font-bold text-lg text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
                           >
-                            {menuItem.title}
+                            {menuItem.label}
                             <span className="group-hover:rotate-180 soft">
                               <svg width="25" height="24" viewBox="0 0 25 24">
                                 <path
@@ -131,7 +131,7 @@ const Header = () => {
                                 key={index}
                                 className="block pl-3 rounded py-2.5 text-sm text-dark soft hover:translate-x-2 hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                               >
-                                {submenuItem.title}
+                                {submenuItem.label}
                               </Link>
                             ))}
                           </div>
@@ -143,14 +143,14 @@ const Header = () => {
               </nav>
             </div>
           </div>
-          <div className="flex items-center justify-end pr-16 lg:pr-0 w-40 max-w-full ">
+          <div className="flex items-center justify-end pr-16 lg:pr-0 w-[34rem] lg:w-48 max-w-full ">
             {/* <ThemeToggler /> */}
             <a
               href="/services"
-              className="relative cursor-pointer inline-flex items-center justify-center p-0.5 mr-3 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+              className="relative cursor-pointer inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
             >
-              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                Order
+              <span className="relative p-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Offerte anfordern
               </span>
             </a>
           </div>

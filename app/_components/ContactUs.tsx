@@ -24,18 +24,18 @@ const ContactUs = () => {
   const supportSchema = z.object({
     fullName: z
       .string()
-      .min(1, { message: "Your Name is required." })
-      .max(50, { message: "Your Name is too long." }),
+      .min(1, { message: "Ihr Name ist erforderlich." })
+      .max(50, { message: "Ihr Name ist zu lang." }),
     email: z
       .string()
-      .min(1, { message: "Your email is required" })
-      .email({ message: "Invalid Email" }),
+      .min(1, { message: "Ihre E-Mail-Adresse ist erforderlich." })
+      .email({ message: "Ungültige E-Mail." }),
     subject: z
       .string()
-      .min(1, { message: "Title must contain at least 1 character" }),
+      .min(1, { message: "Der Titel muss mindestens 1 Zeichen enthalten." }),
     message: z
       .string()
-      .min(1, { message: "Message must contain at least 1 character" }),
+      .min(1, { message: "Die Nachricht muss mindestens 1 Zeichen enthalten." }),
   });
   type ISupport = z.infer<typeof supportSchema>;
   const {
@@ -95,7 +95,7 @@ const ContactUs = () => {
     {
       idTag: "subject",
       type: "text",
-      placeholder: "Subject",
+      placeholder: "Thema",
       error: errors.subject,
       register: register("subject"),
       isTextArea: false,
@@ -103,10 +103,11 @@ const ContactUs = () => {
     {
       idTag: "message",
       type: "text",
-      placeholder: "Message",
+      placeholder: "Nachricht",
       error: errors.message,
       register: register("message"),
       isTextArea: true,
+      rows: 6,
     },
   ];
   return (
@@ -118,10 +119,9 @@ const ContactUs = () => {
             initial={variantsLeft.hidden}
             animate={variantsLeft.enter}
           >
-            <h1 className="text-3xl font-extrabold">{`Let's Talk`}</h1>
+            <h1 className="text-3xl font-extrabold">{`Lass uns reden`}</h1>
             <p className="text-sm text-gray-400 mt-3">
-              {`Have some big idea or brand to develop and need help? Then reach out
-            we'd love to hear about your project and provide help.`}
+              {`Sie möchten eine große Idee oder Marke entwickeln und benötigen Hilfe? Dann wenden Sie sich an uns. Wir würden uns freuen, von Ihrem Projekt zu hören und Ihnen zu helfen.`}
             </p>
             <div className="mt-12">
               <h2 className="text-lg font-extrabold">Email</h2>
@@ -131,12 +131,12 @@ const ContactUs = () => {
                     <MdMailOutline />
                   </div>
                   <a
-                    href="mailto:MoveMate@info.ch"
+                    href="mailto:info@MoveMate.ch"
                     className="text-gray-600 soft hover:text-primary text-sm ml-3"
                     target="_blank"
                   >
-                    <small className="block">Mail</small>
-                    <strong>MoveMate@info.ch</strong>
+                    <small className="block">Post</small>
+                    <strong>info@MoveMate.ch</strong>
                   </a>
                 </li>
                 <li className="flex items-center pt-5">
@@ -144,18 +144,18 @@ const ContactUs = () => {
                     <FaPhoneAlt />
                   </div>
                   <a
-                    href="https://wa.me/+201010385495"
+                    href="https://wa.me/+41779919854"
                     className="text-gray-600 soft hover:text-primary text-sm ml-3"
                     target="_blank"
                   >
-                    <small className="block">Phone</small>
-                    <strong>01010385495</strong>
+                    <small className="block">Telefon</small>
+                    <strong>+41779919854</strong>
                   </a>
                 </li>
               </ul>
             </div>
             <div className="mt-12">
-              <h2 className="text-xl font-extrabold">Socials</h2>
+              <h2 className="text-xl font-extrabold">Soziale Netzwerke</h2>
               <ul className="flex mt-3 space-x-4">
                 <li className="bg-[#e6e6e6cf] hover:text-white hover:bg-blue-500 soft cursor-pointer hover:scale-110 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <a href="#">
@@ -188,13 +188,13 @@ const ContactUs = () => {
                 loop={false}
               />
               <p className=" text-center text-green-700 !-mt-10 font-bold">
-                Email sent Successfully
+                Email wurde erfolgreich Versendet
               </p>
               <a
                 href="/"
                 className="px-5 py-2 text-white bg-primary cursor-pointer hover:bg-sky-700 rounded-lg soft"
               >
-                Back to home
+                Zurück nach Hause
               </a>
             </motion.div>
           )}
@@ -211,13 +211,13 @@ const ContactUs = () => {
                 loop={true}
               />
               <p className=" text-center text-red-700 font-bold">
-                Email not sent, Please try again.
+                E-Mail nicht gesendet. Bitte versuchen Sie es erneut.
               </p>
               <a
                 href="/"
                 className="px-5 py-2 text-white bg-primary cursor-pointer hover:bg-sky-700 rounded-lg soft"
               >
-                Back to home
+                Zurück nach Hause
               </a>
             </motion.div>
           )}
@@ -237,6 +237,7 @@ const ContactUs = () => {
                   error,
                   register,
                   isTextArea,
+                  rows,
                 } = input;
                 return (
                   <Input
@@ -247,9 +248,9 @@ const ContactUs = () => {
                     error={error}
                     register={register}
                     isTextArea={isTextArea}
+                    rows={rows}
                   />
-                  );
-                  
+                );
               })}
 
               <button
@@ -276,10 +277,10 @@ const ContactUs = () => {
                         fill="currentColor"
                       />
                     </svg>
-                    <span>Sending...</span>
+                    <span>Senden...</span>
                   </>
                 ) : (
-                  "Send Message"
+                  "Nachricht senden"
                 )}
               </button>
             </motion.form>

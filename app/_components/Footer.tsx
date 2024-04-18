@@ -38,9 +38,11 @@ const Footer = () => {
             <Logo />
           </div>
 
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            consequuntur amet culpa cum itaque neque.
+          <p className="mx-auto mt-6 max-w-lg text-center leading-relaxed text-gray-500">
+            Verabschieden Sie sich von Stress und Unordnung, Ihrem
+            Allround-Experten für mühelose Umzüge, strahlende Reinigung,
+            umweltfreundliche Entsorgung inspirierende Malerarbeiten im
+            Innenbereich.
           </p>
 
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
@@ -51,7 +53,7 @@ const Footer = () => {
                     className="text-gray-700 transition hover:text-primary"
                     href={item?.path || "services"}
                   >
-                    {item.title}
+                    {item.label}
                   </Link>
                 </li>
               );

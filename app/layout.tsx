@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     // Todo - Add a dutch lang attribute to the html tag
-    <html lang="en" suppressHydrationWarning>
+    <html lang="du" suppressHydrationWarning>
       <head />
       <body className={inter.className}>
         <Image

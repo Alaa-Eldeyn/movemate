@@ -6,16 +6,16 @@ const SubFooter = () => {
     <MotionDiv
       initial={{ opacity: 0, y: 20, x: 0 }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      className="flex flex-col sm:flex-row gap-3 justify-evenly items-center p-6 mt-8 bg-[#ffffff5a] border-y"
+      className="flex flex-col sm:flex-row gap-3 justify-evenly items-center p-6 mt-8 bg-[#ffffff5a] border-y text-center"
     >
       <div>
-        Copyright @ {new Date().getFullYear()} By -{" "}
+        Urheberrechte © {new Date().getFullYear()} von -{" "}
         <a href="#" className="text-primary">
           DevArt
         </a>
       </div>
       <div>
-        Developed By{" "}
+        Entwickelt von{" "}
         <a href="#" className="text-primary">
           @Alaa-Eldeyn
         </a>

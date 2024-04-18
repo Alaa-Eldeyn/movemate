@@ -15,7 +15,7 @@ const Title = ({
       className="text-center pt-16"
     >
       <h6 className="head-small">{mainTitle}</h6>
-      <h2 className="text-[40px] md:text-[50px] lg:text-[55px] leading-none font-extrabold pt-2">
+      <h2 className="text-[40px] md:text-[50px] leading-none font-extrabold pt-2">
         {slogan}
       </h2>
     </MotionDiv>

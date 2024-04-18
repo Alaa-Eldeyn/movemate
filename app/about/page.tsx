@@ -20,17 +20,17 @@ const page = () => {
             initial={{ opacity: 0, y: -20, x: 0 }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
           >
-            <div
-              className="w-full container mx-auto text-center"
-              style={{ maxWidth: "670px", marginBottom: "60px" }}
-            >
+            <div className="w-full container mx-auto text-center max-w-[650px] mb-[60px]">
               <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
-                We’re on a mission to make building your business
+                Willkommen bei MoveMate
               </h2>
               <p className="text-base !leading-relaxed text-body-color md:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                varius eros eget sapien consectetur ultrices. Ut quis dapibus
-                libero.{" "}
+                Wir sind Ihr One-Stop-Shop für alle Ihre Bedürfnisse rund um
+                Umzug und Hauspflege. Egal, ob Sie einen stressfreien Umzug
+                planen, Ihr Zuhause auf Vordermann bringen oder einfach einen
+                neuen Anstrich benötigen - wir stehen Ihnen mit unserem
+                erfahrenen Team und unseren erstklassigen Dienstleistungen zur
+                Seite.
               </p>
             </div>
           </MotionDiv>
@@ -58,13 +58,22 @@ const page = () => {
                 alt="about image"
                 className="w-full rounded-lg shadow-sm"
               />
-              <div className="pt-10">
-                <div className="mb-10">
-                  <h3 className="text-center text-[28px] font-semibold leading-snug text-black dark:text-white sm:text-[32px] lg:text-left">
-                    More than 15k+ companies use our products services.
-                  </h3>
+              <div className="pt-5">
+                <div className="mb-5">
+                  <p className="text-center text-[14px] leading-snug text-black dark:text-white md:text-[16px] lg:text-[18px] lg:text-left">
+                    Unser Umzugsservice sorgt dafür, dass Ihr Umzug reibungslos
+                    und effizient verläuft, damit Sie sich auf das Wesentliche
+                    konzentrieren können. Mit unserer professionellen Reinigung
+                    verwandeln wir Ihr Zuhause oder Büro in eine makellose Oase.<br/><br/>
+                    Unser Entsorgungsdienst kümmert sich um alles, was Sie
+                    loswerden möchten, auf umweltfreundliche und
+                    gesetzeskonforme Weise. Und mit unseren hochwertigen
+                    Malerarbeiten verleihen wir Ihren Räumen einen neuen Look
+                    und bringen Frische in Ihr Leben.
+                  </p>
                 </div>
-                <div className="flex w-full justify-center lg:justify-start items-center text-center lg:text-start">
+                {/* To do - لما يجي عملاء */}
+                {/* <div className="flex w-full justify-center lg:justify-start items-center text-center lg:text-start">
                   <div>
                     <h4 className="text-3xl font-bold text-black dark:text-white">
                       14K+
@@ -82,7 +91,7 @@ const page = () => {
                       Satisfaction
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </MotionDiv>
           </div>
@@ -92,15 +101,17 @@ const page = () => {
             <MotionDiv
               initial={{ opacity: 0, y: -20, x: 0 }}
               whileInView={{ opacity: 1, y: 0, x: 0 }}
-              className="w-full mx-auto text-center"
-              style={{ maxWidth: "570px", marginBottom: "80px" }}
+              className={`w-full mx-auto text-center max-w-[650px] mb-[80px]`}
             >
               <h2 className="mb-4 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
-                We are ready to help
+                Wir sind bereit zu helfen
               </h2>
               <p className="text-base leading-relaxed text-body-color md:text-lg">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+                Bei MoveMate legen wir großen Wert auf Qualität, Zuverlässigkeit
+                und Kundenzufriedenheit. Lassen Sie uns Ihnen dabei helfen, Ihr
+                Zuhause zu verschönern und Ihre Umzugserfahrung zu vereinfachen.
+                Kontaktieren Sie uns noch heute für eine individuelle Beratung
+                und lassen Sie uns gemeinsam Ihr nächstes Projekt angehen!
               </p>
             </MotionDiv>
           </div>
@@ -125,7 +136,7 @@ const page = () => {
             <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-cover bg-center bg-no-repeat"></div>
           </div>
         </section>
-        <Title mainTitle="Testimonials" slogan="What People Say" />
+        <Title mainTitle="Referenzen" slogan="Was die Leute sagen" />
         <Testo />
       </div>
     </>

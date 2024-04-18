@@ -20,13 +20,13 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <WhyUs />
-      <Title mainTitle="Our Services" slogan="What We Do" />
+      <Title mainTitle="Unsere Dienstleistungen" slogan="Was wir tun" />
       <WeDo />
       <div className="bg-[#ffffff5a] border-y">
-        <Title mainTitle="Testimonials" slogan="What People Say" />
+        <Title mainTitle="Referenzen" slogan="Was die Leute sagen" />
         <Testo />
       </div>
-      <Title mainTitle="Contact Us" slogan="Get In Touch" />
+      <Title mainTitle="Kontaktiere uns" slogan="In Kontakt kommen" />
       <ContactUs />
       <Footer />
     </>

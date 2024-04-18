@@ -1,14 +1,14 @@
 import { StaticImageData } from "next/image";
-import first from "./slide-02-1894x777.jpg";
-import second from "./slide-03-1894x777.jpg";
-import third from "./slide-04-1894x777.jpg";
-import fourth from "./slide-05-1894x777.jpg";
+import first from "./Furniture3.jpg";
+import second from "./Moving3.jpg";
+import third from "./Cleaning.jpg";
+import fourth from "./Moving4.jpg";
 export const images: {
   src: StaticImageData;
   title: string;
 }[] = [
-  { src: third, title: "third" },
   { src: first, title: "first" },
   { src: second, title: "second" },
+  { src: third, title: "third" },
   { src: fourth, title: "fourth" },
 ];

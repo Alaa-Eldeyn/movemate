@@ -15,9 +15,9 @@ const WhyUs = () => {
           whileInView={variantsLeft.enter}
           className="lg:pr-5"
         >
-          <p className="head-small">Learn About us</p>
+          <p className="head-small">Über Uns</p>
           <h2 className="font-extrabold text-[40px] md:text-[50px] lg:text-[55px] text-zinc-800 leading-none py-3">
-            Moving with MoveMate is Always Easy & Fun.
+            MoveMate Ihre Quelle für Neubeginn und Frische!.
           </h2>
           <div className="pt-5">
             <Image alt="rfe" src={img} className="rounded-lg w-full" />
@@ -41,9 +41,10 @@ const WhyUs = () => {
               <Logo />
             </div>
             <p className="max-w-[60%] leading-loose">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              magnam autem, enim quaerat laudantium eius labore rerum tempora
-              inventore deleniti.
+              Verabschieden Sie sich von Stress und Unordnung, Ihrem
+              Allround-Experten für mühelose Umzüge, strahlende Reinigung,
+              umweltfreundliche Entsorgung inspirierende Malerarbeiten im
+              Innenbereich
             </p>
           </div>
         </MotionDiv>

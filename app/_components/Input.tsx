@@ -6,6 +6,8 @@ type InputProps = {
   error: FieldError | undefined;
   register: UseFormRegisterReturn<string>;
   isTextArea?: boolean;
+  rows?: number;
+  steps?: number;
 };
 const Input = ({
   idTag,
@@ -14,20 +16,22 @@ const Input = ({
   error,
   register,
   isTextArea,
+  rows,
+  steps
 }: InputProps) => {
   return (
     <>
       <label
         htmlFor={idTag}
-        className="relative block rounded-md border border-gray-200 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+        className="relative placeholder:capitalize block rounded-md border border-gray-200 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
       >
         {isTextArea ? (
           <textarea
             placeholder={placeholder}
-            rows={6}
+            rows={rows ? rows : 3}
             {...register}
             id={idTag}
-            className={`peer w-full rounded-md py-2.5 px-4 border-2 text-sm border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0${
+            className={`peer placeholder:capitalize w-full rounded-md py-2.5 px-4 border-2 text-sm border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0${
               error ? "border-red-500" : null
             }`}
           />
@@ -35,9 +39,11 @@ const Input = ({
           <input
             type={type}
             id={idTag}
-            className={`peer w-full rounded-md py-2.5 px-4 border-2 text-sm border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0${
+            className={`peer placeholder:capitalize w-full rounded-md py-2.5 px-4 border-2 text-sm border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0${
               error ? "border-red-500" : null
-            }`}
+                }`}
+              step={type === "number" ? steps : ""}
+              min={type === "number" ? 1 : ""}
             placeholder={placeholder}
             {...register}
           />

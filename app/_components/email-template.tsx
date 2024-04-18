@@ -46,7 +46,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         fontStyle="normal"
       />
     </Head>
-    <Preview>Support</Preview>
+    <Preview>Unterstützung</Preview>
     <Tailwind>
       <Body className="mx-auto my-auto bg-white font-sans antialiased">
         <Container className="mx-auto my-[40px] w-[600px] max-w-[600px] rounded-lg border border-solid border-gray-200 bg-white px-8">
@@ -62,7 +62,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           <Section className="relative rounded-xl bg-blue-400 !text-center">
             <div className="bottom-0 left-0 right-0 top-10 mx-auto my-auto p-10">
               <Text className="m-0 font-bold text-[16px] text-white">
-                Technical Support
+                Technische Unterstützung
               </Text>
             </div>
           </Section>
@@ -89,7 +89,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           <Section>
             <Row className="mt-8 flex gap-5">
               <Text className="m-0 text-xl font-semibold text-gray-900">
-                Subject:{" "}
+                Thema:{" "}
                 <span className="mt-2 text-[16px] text-gray-500"> {title}</span>
               </Text>
             </Row>
@@ -113,10 +113,10 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                   Move<span className="text-orange-500">Mate</span>
                 </Text>
                 <Text className="my-2 text-[16px] font-semibold text-gray-900">
-                  Transaction
+                  Transaktion
                 </Text>
                 <Text className="mt-1 text-[16px] text-gray-500">
-                  Think different
+                  Denke anders
                 </Text>
               </Column>
               <Column align="left" className="table-cell align-bottom">

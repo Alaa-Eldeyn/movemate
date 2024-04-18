@@ -11,7 +11,7 @@ const BreadCrumbs = () => {
       <ol className="flex justify-center items-center gap-1 text-xl text-gray-600">
         <li>
           <a href="/" className="block transition hover:text-gray-700">
-            <span className="sr-only"> Home </span>
+            <span className="sr-only"> Heim </span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +30,35 @@ const BreadCrumbs = () => {
           </a>
         </li>
         {pathNames.map((path, index) => {
+          let label = path;
+          switch (path) {
+            case "about":
+              label = "Über Uns";
+              break;
+            case "contact":
+              label = "kontakt";
+              break;
+            case "services":
+              label = "Dienstleistungen";
+              break;
+            case "moving":
+              label = "Umzug";
+              break;
+            case "cleaning":
+              label = "Reinigung";
+              break;
+            case "painting":
+              label = "Maler Arbeit im Innenbereich";
+              break;
+            case "furniture":
+              label = "Möbel und Lampen Montag";
+              break;
+            case "disposal":
+              label = "Entsorgung und Räumungen";
+              break;
+            default:
+              break;
+          }
           return (
             <Fragment key={index}>
               <li className="rtl:rotate-180">
@@ -48,15 +77,15 @@ const BreadCrumbs = () => {
               </li>
               <li>
                 {index === pathNames.length - 1 ? (
-                  <span className="block cursor-pointer transition hover:text-gray-700">
-                    {path}
+                  <span className="block cursor-pointer transition hover:text-gray-700 capitalize">
+                    {label}
                   </span>
                 ) : (
                   <a
                     href={`/${path}`}
-                    className="block cursor-pointer transition hover:text-gray-700"
+                    className="block cursor-pointer transition hover:text-gray-700 capitalize"
                   >
-                    {path}
+                    {label}
                   </a>
                 )}
               </li>
